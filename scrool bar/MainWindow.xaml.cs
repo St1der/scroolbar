@@ -27,11 +27,13 @@ namespace scrool_bar
 
         private void bt1_Click(object sender, RoutedEventArgs e)
         {
-            b.Value += 10;
+            b.Value += 5;
         }
         private void bt2_Click(object sender, RoutedEventArgs e)
         {
-            b.Value -= 10;
+            b.Value -= 5;
         }
+
+ 
     }
 }

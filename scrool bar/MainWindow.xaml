@@ -8,8 +8,27 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Canvas>
-            <Button Name="bt1" Height="20" Width="50"  Content="up" Click="bt1_Click" Canvas.Left="548" Canvas.Top="222"/>
-            <Button Name="bt2" Height="20" Width="50" Content="down"  Click="bt2_Click" Canvas.Left="160" Canvas.Top="222"/>
+            <Button Name="bt1"  Content="Max" Height="20" Width="50" Canvas.Left="516" Canvas.Top="217" Click="bt1_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Name="bt2"  Content="Min" Height="20" Width="50" Canvas.Left="200" Canvas.Top="217" Click="bt2_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button   Content="{Binding ElementName=b, Path=Value }" Height="20"  Width="50" Canvas.Left="350" Canvas.Top="177" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <ProgressBar HorizontalAlignment="Left" Name="b" Height="20"  VerticalAlignment="Top" Width="200" Canvas.Left="281" Canvas.Top="217" />
         </Canvas>
     </Grid>
